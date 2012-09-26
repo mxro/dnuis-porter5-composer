@@ -1,4 +1,5 @@
 dnuis-porter5-composer
 ======================
 
-Composer for Porters Five Forces Style Questions
+Composer for [Porter's Five Forces Style Questions](http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/App_Porter_s_5)
+
