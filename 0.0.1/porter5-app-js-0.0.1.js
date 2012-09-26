@@ -23,11 +23,14 @@
 			qc.sd = $.initPorter5QuestionData({client: client});
 			
 			qc.sf = $.initPorter5QuestionForm({
-				elem : $(".strategyQuestionForm", elem),
+				elem : $(".porter5QuestionForm", elem),
 				onSubmit: function(res) {
 					AJ.ui.showProgressBar();
 					qc.sf.hide();
 					$('.submitButtonRow', elem).hide();
+					
+					alert(JSON.stringify(res));
+					return;
 					qc.sd.submitQuestion(res, function(node, secret) {
 						AJ.ui.hideProgressBar();
 						
