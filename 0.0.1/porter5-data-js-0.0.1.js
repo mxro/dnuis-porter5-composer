@@ -8,16 +8,16 @@
 		var client = params.client;
 
 		// constants ------
-		var aStrategyQuestion = client
-				.reference("http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/Types/Strategy_Quadrant_Questi");
+		var aPorters5Question = client
+				.reference("http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/Types/Porter_s_5_Question");
 		var aBrandName = client
 				.reference("http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/Types/Brand_Name");
 		var aBrandImage = client
 				.reference("http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/Types/Brand_Image");
 		var aBrandVideo = client
 				.reference("http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/Types/Video_Link");
-		var aCorrectStrategy = client
-				.reference("http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/Types/Correct_Strategy");
+		var anIndustryStructure = client
+				.reference("http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/Types/Industry_Structure");
 		var aJustification = client
 				.reference("http://slicnet.com/mxrogm/mxrogm/apps/nodejump/docs/8/n/Types/Justification");
 		var aName = client
@@ -72,10 +72,10 @@
 																			client
 																					.select({
 																						from : res.loadedNode,
-																						linkingTo : aCorrectStrategy,
+																						linkingTo : anIndustryStructure,
 																						onSuccess : function(
 																								sr) {
-																							data.correctStrategy = sr.values[0]
+																							data.industryStructure= sr.values[0]
 																									.value();
 
 																							client
@@ -184,11 +184,11 @@
 
 			client.select({
 				from : node,
-				linkingTo : aCorrectStrategy,
+				linkingTo : anIndustryStructure,
 				onSuccess : function(sr) {
 					var newNode = client.updateValue({
 						forNode : sr.nodes[0],
-						newValue : data.correctStrategy
+						newValue : data.industryStructure
 					});
 
 					client.replace({
@@ -299,7 +299,7 @@
 		qd.priv.writeQuestionDataToNode = function(node, secret, data,
 				onSuccess) {
 			client.append({
-				node : aStrategyQuestion,
+				node : aPorters5Question,
 				to : node
 			});
 
@@ -325,15 +325,15 @@
 				to : imageLink
 			});
 
-			var correctStrategy = client.append({
-				node : data.correctStrategy,
+			var industryStructure = client.append({
+				node : data.industryStructure,
 				to : node,
-				atAddress : "./correctStrategy"
+				atAddress : "./industryStrucutre"
 			});
 
 			client.append({
-				node : aCorrectStrategy,
-				to : correctStrategy
+				node : anIndustryStructure,
+				to : industryStructure
 			});
 
 			var justification = client.append({

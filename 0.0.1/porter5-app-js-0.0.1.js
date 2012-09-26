@@ -29,8 +29,6 @@
 					qc.sf.hide();
 					$('.submitButtonRow', elem).hide();
 					
-					alert(JSON.stringify(res));
-					return;
 					qc.sd.submitQuestion(res, function(node, secret) {
 						AJ.ui.hideProgressBar();
 						
