@@ -77,7 +77,7 @@
 																								sr) {
 																							data.industryStructure= sr.values[0]
 																									.value();
-
+																							
 																							client
 																									.select({
 																										from : res.loadedNode,

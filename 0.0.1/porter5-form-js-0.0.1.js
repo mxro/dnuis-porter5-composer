@@ -63,15 +63,15 @@
 			$('.upi', elem).val(inputs.upi);
 
 			$("input[name=subsitutesRadios][value="
-							+ inputs.split(":")[0] + "]", elem).attr('checked',
+							+ inputs.industryStructure.split(":")[0] + "]", elem).attr('checked',
 					'checked');
-			$("input[name=supplierRadios][value=" + inputs.split(":")[1] + "]",
+			$("input[name=supplierRadios][value=" + inputs.industryStructure.split(":")[1] + "]",
 					elem).attr('checked', 'checked');
-			$("input[name=rivalryRadios][value=" + inputs.split(":")[2] + "]",
+			$("input[name=rivalryRadios][value=" + inputs.industryStructure.split(":")[2] + "]",
 					elem).attr('checked', 'checked');
-			$("input[name=buyerRadios][value=" + inputs.split(":")[3] + "]",
+			$("input[name=buyerRadios][value=" + inputs.industryStructure.split(":")[3] + "]",
 					elem).attr('checked', 'checked');
-			$("input[name=entrantsRadios][value=" + inputs.split(":")[4] + "]",
+			$("input[name=entrantsRadios][value=" + inputs.industryStructure.split(":")[4] + "]",
 					elem).attr('checked', 'checked');
 
 			setTimeout(
