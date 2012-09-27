@@ -53,6 +53,8 @@
 		};
 
 		qf.loadQuestion = function(inputs) {
+			
+			
 			$('.brandName', elem).val(inputs.brandName);
 			$('.imageLink', elem).val(inputs.imageLink);
 			$('.videoLink', elem).val(inputs.videoLink);
@@ -60,8 +62,7 @@
 			$('.name', elem).val(inputs.name);
 			$('.upi', elem).val(inputs.upi);
 
-			$(
-					"input[name=subsitutesRadios][value="
+			$("input[name=subsitutesRadios][value="
 							+ inputs.split(":")[0] + "]", elem).attr('checked',
 					'checked');
 			$("input[name=supplierRadios][value=" + inputs.split(":")[1] + "]",
