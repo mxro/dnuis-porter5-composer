@@ -205,8 +205,6 @@
 		// init UI
 		(function() {
 
-			$('.moreInfos', elem).popover();
-
 			// Use the Google Loader script to load the google.picker
 			// script.
 

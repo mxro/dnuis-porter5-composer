@@ -161,6 +161,8 @@ html,body {
 
 	<script type="text/javascript" language="javascript"
 		src="http://appjangle.com/js/v01/onejs/onejs.nocache.js"></script>
+		
+
 
 
 	<script
@@ -279,21 +281,22 @@ html,body {
     
 	function AJ_engineLoaded(aj) {
 
-		
 		AJ.statusBar = $.ajInitStatusBar($("#ajstatusbar"), aj);
 		AJ.notificationBar = $.ajInitNotificationBar($("#ajnotificationbar"), aj);
 		//AJ.navbar = $.ajInitNavbar($("#ajnavbar"), aj);
 		AJ.progressBar=$.ajInitProgressBar($("#ajprogressbar"));
 		
-		var client = aj.createClient();
+		//var client = aj.createClient();
 		
-		var porter5app = $.initPorter5App({
-			elem: $('#composer'),
-			client: client
-		});
+		//var porter5app = $.initPorter5App({
+		//	elem: $('#composer'),
+		//	client: client
+		//});
 		
 	}
 
+	
+	
 	window.onload = function() {
 		
 		
