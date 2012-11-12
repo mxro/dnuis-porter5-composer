@@ -286,12 +286,12 @@ html,body {
 		//AJ.navbar = $.ajInitNavbar($("#ajnavbar"), aj);
 		AJ.progressBar=$.ajInitProgressBar($("#ajprogressbar"));
 		
-		//var client = aj.createClient();
+		var client = aj.createClient();
 		
-		//var porter5app = $.initPorter5App({
-		//	elem: $('#composer'),
-		//	client: client
-		//});
+		var porter5app = $.initPorter5App({
+			elem: $('#composer'),
+			client: client
+		});
 		
 	}
 
